@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'koneksiurl'
+
+    publishedGroupId = 'com.gmail.epanji'
+    libraryName = 'koneksiurl'
+    artifact = 'koneksiurl'
+
+    libraryDescription = 'Simple library to help execute html form post from android.'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'panji'
+    developerName = 'Panji Kusuma'
+    developerEmail = 'epanji@gmail.com'
+
+    licenseName = 'GNU General Public License, version 2 (GPL-2.0)'
+    licenseUrl = 'http://www.opensource.org/licenses/gpl-2.0.php'
+    allLicenses = ["GPL-2.0"]
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+}
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
