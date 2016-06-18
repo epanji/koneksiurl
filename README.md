@@ -7,9 +7,17 @@ from android. (It does not support https)
 Installation
 ------------
 
-You can use this library in your android studio project by add
+You can use this library in your android studio project by add one of
 the following `build.gradle` configuration:
 
+**Jcenter**
+```jcenter   
+dependencies {
+    compile 'com.gmail.epanji:koneksiurl:1.0.0'
+}
+```
+
+**Maven**
 ```maven
 repositories {
     maven {
@@ -28,8 +36,7 @@ Usage
 This library need an internet connections, so use this only inside
 class that extends `AsyncTask`.
 
-GET
----
+**GET**
  
 If you want to use GET, just
 add `?field_name=value&field_name2=value2` to url:
@@ -49,8 +56,7 @@ public class Sample extends AsyncTask<Void,Void,Void> {
 }
 ```
 
-POST
-----
+**POST**
 
 Simple http POST
 
@@ -81,8 +87,7 @@ public class Sample extends AsyncTask<Void,Void,Void> {
 }
 ```
 
-POST MULTIPART
---------------
+**POST multipart**
 
 Http POST with multipart
 
@@ -124,8 +129,7 @@ public class Sample extends AsyncTask<Void,Void,Void> {
 Notes:
 If you don't need second params on execute(1st, 2nd, 3rd), use null.
 
-POST ARRAY
-----------
+**POST array**
 
 Http POST field array
 
