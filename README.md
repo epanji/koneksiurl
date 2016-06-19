@@ -11,6 +11,7 @@ You can use this library in your android studio project by add one of
 the following `build.gradle` configuration:
 
 **Jcenter**
+
 ```jcenter   
 dependencies {
     compile 'com.gmail.epanji:koneksiurl:1.0.0'
@@ -18,6 +19,7 @@ dependencies {
 ```
 
 **Maven**
+
 ```maven
 repositories {
     maven {
